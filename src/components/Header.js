@@ -1,13 +1,13 @@
-import { Fragment } from "react";
+//import { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import { NavLink } from "react-router-dom";
 
 const navigation = [
-  { name: "Employees", href: "/", current: true },
-  { name: "Customers", href: "/customers", current: false },
-  { name: "Projects", href: "/other", current: false },
-  { name: "Calendar", href: "/misc", current: false },
+  { name: "Employees", href: "/" },
+  { name: "Customers", href: "/customers" },
+  { name: "Dictionary", href: "/dictionary" },
+  { name: "Calendar", href: "/misc" },
 ];
 
 function classNames(...classes) {
@@ -97,7 +97,7 @@ export default function Header(props) {
       </Disclosure>
 
       <div className="bg-slate-300 min-h-screen">
-        <div className="mx-auto max-w-[1920px] p-2">{props.children}</div>
+        <div className="mx-auto max-w-[1920px] px-3 py-2">{props.children}</div>
       </div>
     </>
   );
